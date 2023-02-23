@@ -1,4 +1,4 @@
-import CommentModel from "../Models/CommentModel.js";
+import CommentModel from "../Models/commentModel.js";
 
 export const createComment = async (req, res) => {
   const postId = req.params.id;
