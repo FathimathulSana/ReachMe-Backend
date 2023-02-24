@@ -1,4 +1,5 @@
 import OtpModel from "../Models/otpModel.js";
+import UserModel from '../Models/userModel.js'
 import bcrypt, { genSalt } from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
