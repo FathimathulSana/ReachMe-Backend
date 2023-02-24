@@ -29,7 +29,7 @@ export const resetPass = async (req, res) => {
             from: process.env.FROM_EMAIL,
             subject: "Password Reset Request",
             text: `You are receiving this email because you has requested to reset your password. Please click on the following link or paste it into your browser to reset your password :\n\n
-            http://localhost:3000/resetpass/${token}\n\n
+            https://www.reachmee.thesak.online/resetpass/${token}\n\n
             If you did not request this, Please ignore this email and your password will remain unchanged.`
         };
         transporter.sendMail(mailOptions, (error, info) => {
