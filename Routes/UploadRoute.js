@@ -28,7 +28,7 @@ router.post('/', imageUpload.single("file"), async (req, res) => {
   }
 })
 
-app.use(compression());
+router.use(compression());
 
 router.post('/video', videoUpload.single("file"), (req, res) => {
   try {
