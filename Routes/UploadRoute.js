@@ -1,8 +1,7 @@
-import express, { application } from "express";
+import express from "express";
 import { authMiddleWare, isActiveMiddleware } from "../MiddleWare/authMiddleWare.js";
 import multer from "multer";
 import sharp from 'sharp';
-import compression from "compression";
 const router = express.Router()
 
 const imageStorage = multer.memoryStorage();
@@ -27,8 +26,6 @@ router.post('/', imageUpload.single("file"), async (req, res) => {
     return res.status(500).json("something went wrong!")
   }
 })
-
-app.use(compression());
 
 router.post('/video', videoUpload.single("file"), (req, res) => {
   try {
