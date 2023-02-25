@@ -4,11 +4,18 @@ import UserModel from "../Models/userModel.js";
 
 //Create new Post
 export const createPost = async (req, res) => {
-    const newPost = new PostModel(req.body);
+    // console.log(req.body,'is the body')
+    const {userId, description,image}=req.body;
+    const newPost = new PostModel({userId,description,image});
+    console.log(newPost,"kerinnindo");
     try {
+        console.log("before try")
         await newPost.save();
+        console.log(newPost,"ivideyoo")
         res.status(200).json(newPost);
     } catch (error) {
+        console.log("erreril keri", error)
+
         res.status(500).json(error);
     }
 };

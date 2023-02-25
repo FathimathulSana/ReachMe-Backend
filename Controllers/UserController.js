@@ -79,6 +79,7 @@ export const followUser = async (req, res) => {
                     type: 'follow'
                 });
                 await notification.save();
+                console.log("keri");
                 res.status(200).json("User followed!")
             } else {
                 res.status(403).json("User is Already followed by you")
