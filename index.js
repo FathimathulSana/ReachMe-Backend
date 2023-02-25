@@ -22,13 +22,6 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors())
 dotenv.config();
 
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://main.d34ofsx00uuomk.amplifyapp.com');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    next();
-  });
-
 mongoose.set("strictQuery", false);
 mongoose
     .connect(process.env.MONGO_DB, {
