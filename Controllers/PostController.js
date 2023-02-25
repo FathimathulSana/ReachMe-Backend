@@ -5,8 +5,8 @@ import UserModel from "../Models/userModel.js";
 //Create new Post
 export const createPost = async (req, res) => {
     // console.log(req.body,'is the body')
-    const {userId, description,image}=req.body;
-    const newPost = new PostModel({userId,description,image});
+    const {userId, description,image,video}=req.body;
+    const newPost = new PostModel({userId,description,image,video});
     console.log(newPost,"kerinnindo");
     try {
         console.log("before try")
