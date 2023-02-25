@@ -23,7 +23,7 @@ app.use('/images', express.static("./public/images"))
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors({
-    origin:["https://main.d34ofsx00uuomk.amplifyapp.com","http://localhost:3000"],
+    origin:["https://main.d34ofsx00uuomk.amplifyapp.com","https://main.reachmee.thesak.online","http://localhost:3000"],
     credentials:true,
   }))
 dotenv.config();
@@ -53,7 +53,7 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
     cors: {
-      origin: ["http://localhost:3000","https://main.d34ofsx00uuomk.amplifyapp.com"],
+      origin: ["http://localhost:3000","https://main.d34ofsx00uuomk.amplifyapp.com","https://main.reachmee.thesak.online"],
     },
   });
 
